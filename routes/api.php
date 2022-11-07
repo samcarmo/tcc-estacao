@@ -23,18 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('stations', StationController::class);
-
-// Route::get('station/{Station}/weathervalues', function ($station) {
-//     // echo $station;
-//     // return $station;
-//     // var_dump($station);
-//     // echo 'Entrei aqui';
-//     // print_r('Aqui');
-//     if (isset($station)) {
-//         WeatherValueController::class;
-//     } else {
-//         echo 'Id opcional';
-//     }
-// });
-
-Route::apiResource('station/{station}/weathervalues', WeatherValueController::class);
+Route::apiResource('station/{station}/weather-values', WeatherValueController::class);
