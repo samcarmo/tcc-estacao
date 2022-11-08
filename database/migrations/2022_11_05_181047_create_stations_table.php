@@ -17,8 +17,8 @@ class CreateStationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user');
             $table->foreign('user')->references('id')->on('users');
-            $table->string('description');
-            $table->string('location');
+            $table->string('description', 200);
+            $table->string('location', 100);
             $table->string('token')->unique();
             $table->timestamps();
         });

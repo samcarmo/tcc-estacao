@@ -17,8 +17,8 @@ class CreateWeatherValuesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('station');
             $table->foreign('station')->references('id')->on('stations');
-            $table->string('variable');
-            $table->float('value');
+            $table->string('variable', 20);
+            $table->string('value', 15);
             $table->timestamps();
         });
     }

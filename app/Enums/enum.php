@@ -5,14 +5,14 @@ namespace App\Enums;
 /**
  * The Variable enum.
  *
- * @method static self TEMPERATURE()
- * @method static self HUMIDITY()
- * @method static self SOIL_HUMIDITY()
- * @method static self PRESSURE()
- * @method static self ALTITUDE()
- * @method static self WIND_SPEED()
- * @method static self WIND_DIRECTION()
- * @method static self RAINFALL()
+ * @method static self TEMP()
+ * @method static self HUMI()
+ * @method static self SHUM()
+ * @method static self PRES()
+ * @method static self ALTI()
+ * @method static self WSPE()
+ * @method static self WDIR()
+ * @method static self RAIN()
  */
 
 class Variable
