@@ -3,28 +3,28 @@
 namespace App\Enums;
 
 /**
- * The Status enum.
+ * The Variable enum.
  *
- * @method static self TEMP()
- * @method static self HUMI()
- * @method static self SHUM()
- * @method static self PRES()
- * @method static self ALTI()
- * @method static self WSPE()
- * @method static self WDIR()
- * @method static self RAIN()
+ * @method static self TEMPERATURE()
+ * @method static self HUMIDITY()
+ * @method static self SOIL_HUMIDITY()
+ * @method static self PRESSURE()
+ * @method static self ALTITUDE()
+ * @method static self WIND_SPEED()
+ * @method static self WIND_DIRECTION()
+ * @method static self RAINFALL()
  */
 
-class Status
+class Variable
 {
-    const TEMP = 1;
-    const HUMI = 2;
-    const SHUM = 3;
-    const PRES = 4;
-    const ALTI = 5;
-    const WSPE = 6;
-    const WDIR = 7;
-    const RAIN = 8;
+    const TEMP = 'TEMPERATURE';
+    const HUMI = 'HUMIDITY';
+    const SHUM = 'SOIL_HUMIDITY';
+    const PRES = 'PRESSURE';
+    const ALTI = 'ALTITUDE';
+    const WSPE = 'WIND_SPEED';
+    const WDIR = 'WIND_DIRECTION';
+    const RAIN = 'RAINFALL';
     /**
      * Retrieve a map of enum keys and values.
      *
