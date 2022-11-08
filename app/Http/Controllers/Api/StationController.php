@@ -59,9 +59,8 @@ class StationController extends Controller
      */
     public function show(Station $station)
     {
-
         $station->get();
-        var_dump($station);
+
         return response()->json([
             'status' => true,
             'message' => 'Estação retornada com sucesso',
