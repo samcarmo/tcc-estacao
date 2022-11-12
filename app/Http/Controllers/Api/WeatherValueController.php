@@ -53,8 +53,8 @@ class WeatherValueController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => 'Estação cadastrada com sucesso',
-            'station' => $weatherValue
+            // 'message' => 'Estação cadastrada com sucesso',
+            'weatherValue' => $weatherValue
         ], 200);
     }
 
