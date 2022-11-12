@@ -5,6 +5,8 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
+use function PHPUnit\Framework\isNull;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -36,6 +38,22 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        $this->renderable(function (Throwable $e) {
+
+            if (isNull($e)) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Verifique a requisição e tente novamente.'
+                ], 500);
+            } else {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Verifique a requisição e tente novamente.',
+                    'error' => $e
+                ], 500);
+            }
         });
     }
 }
